@@ -51,18 +51,18 @@ public class GameBoardPanel extends JPanel {
       super.setPreferredSize(new Dimension(BOARD_WIDTH, BOARD_HEIGHT));
    }
    public void restart() {
-	   for (int row = 0; row < SudokuConstants.GRID_SIZE; ++row) {
+	for (int row = 0; row < SudokuConstants.GRID_SIZE; ++row) {
           for (int col = 0; col < SudokuConstants.GRID_SIZE; ++col) {
         	   if (cells[row][col].isEditable()) {
-        		   cells[row][col].setText("");
-        		   cells[row][col].status = CellStatus.TO_GUESS;
-              	   cells[row][col].paint();
+        		cells[row][col].setText("");
+        		cells[row][col].status = CellStatus.TO_GUESS;
+              	   	cells[row][col].paint();
         		   
         	      }
 
-          }
-	    }
-	   erro=0;
+           }
+	}
+	erro=0;
    }
    /**
     * Generate a new puzzle; and reset the gameboard of cells based on the puzzle.
